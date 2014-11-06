@@ -1,10 +1,12 @@
 define(['handlebars',
         'jquery',
-        'css!./styling.css'
+        'css!./styling.css',
+        'text!./template.html'
     ],
     function(Handlebars,
         $,
-        CssStyling) {
+        CssStyling,
+        TableTemplate) {
 
         $('#request_buildings_btn').click(function() {
             $('#data_table').empty();
@@ -12,11 +14,13 @@ define(['handlebars',
             $.ajax({
                 type: 'GET',
                 url:location.origin + "/buildings",
-                //contentType: 'application/json',
+                contentType: 'application/json',
                 success: function(data) {           
-                    $('#data_table').html(JSON.stringify(data));
+                    var results = Handlebars.compile(TableTemplate)(data);      
+                    $('#data_table').html(results);
                 },
                 failure: function(errorMsg) {
+                    
                     $('#data_table').html(JSON.stringify(errorMsg));
                 }
             }).always(function() {

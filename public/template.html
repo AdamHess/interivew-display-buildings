@@ -1,0 +1,37 @@
+<table id="building_data_tbl">
+		<tr>
+			<th>Code</th>
+			<th>Description</th>
+			<th>LocationId</th>
+			<th>Building Type</th>
+			<th>Address Lines</th>
+			<th>City</th>
+			<th>State</th>
+			<th>Postal Code</th>
+			<th>Country</th>
+			<th>Image Url</th>
+			<th>Additional Services</th>
+			<th>Longitude</th>
+			<th>Latitude</th>		
+			<th>Office User Only</th>
+		</tr>
+		{{#each this}}
+			<tr>
+				<td>{{Description}}</td>
+				<td>{{LocationId}}</td>
+				<td>{{BuildingType}}</td>
+				<td>{{LongDescription}}</td>
+				<td>{{AddressLines}}</td>
+				<td>{{City}}</td>
+				<td>{{State}}</td>
+				<td>{{PostalCode}}</td>
+				<td>{{Country}}</td>
+				<td>{{ImageUrl}}</td>
+				<td>{{AdditionalServices}}</td>
+				<td>{{BuildingCoordinate.Latitude}}</td>
+				<td>{{BuildingCoordinate.Longitude}}</td>
+				<td>{{BuildingCoordinate.OfficeUseOnly}}</td>
+			</tr>
+		{{/each}}
+
+</table>

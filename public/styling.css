@@ -2,3 +2,16 @@
 	width: 50px; 
 	height: 50px;
 }
+
+#building_data_tbl {
+	table-layout: fixed;
+}
+
+#building_data_tbl th {
+	table-layout: fixed;
+	min-width: 150px;
+	text-align: center
+}
+#building_data_tbl td {
+	text-align: center;
+}
