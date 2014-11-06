@@ -1,0 +1,14 @@
+{
+  "name": "webtest_project",
+  "version": "1.0.0",
+  "description": "Adam Hess WebTest Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adam Hess",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.10.1"
+  }
+}
